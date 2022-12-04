@@ -1,4 +1,85 @@
 MDScreen:
     name: "login"
-    MDLabel:
-        text: "LOGIN PAGE"
+    MDFloatLayout:
+        MDFloatLayout:
+
+            Image:
+                source:"Images/Background.png"
+                size_hint: 0.9, 0.9
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+            Image:
+                source:"Images/Log_Logo.png"
+                size_hint: 0.7, 0.7
+                pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+
+            Image:
+                source:"Images/Log_Icon.png"
+                size_hint: 0.2, 0.2
+                pos_hint: {'center_x': 0.5, 'center_y': .67}
+
+            MDFloatLayout:
+                size_hint: .85, .07
+                pos_hint: {"center_x": .5, "center_y": .53}
+                canvas:
+                    Color:
+                        rgb: (238/255, 238/255, 238/255, 1)
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [10]
+                TextInput:
+                    hint_text: "User-ID"
+                    size_hint: 1, None
+                    icon_right: "android"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    height: self.minimum_height
+                    multiline: False
+                    courser_color: 96/255, 74/255, 215,255, 1
+                    cursor_width: "2sp"
+                    foreground_color: 96/255, 74/255, 215/255, 1
+                    background_color: 0,0,0,0
+                    padding: 15
+
+            MDFloatLayout:
+                size_hint: .85, .07
+                pos_hint: {"center_x": .5, "center_y": .43}
+                canvas:
+                    Color:
+                        rgb: (238/255, 238/255, 238/255, 1)
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [10]
+                TextInput:
+                    hint_text: "Password"
+                    password: True
+                    size_hint: 1, None
+                    icon_right: "android"
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    height: self.minimum_height
+                    multiline: False
+                    courser_color: 96/255, 74/255, 215,255, 1
+                    cursor_width: "2sp"
+                    foreground_color: 96/255, 74/255, 215/255, 1
+                    background_color: 0,0,0,0
+                    padding: 15
+
+            Button:
+                text: "Sign - In"
+                font_size: "16sp"
+                size_hint: .45, .06
+                pos_hint: {"center_x": .5, "center_y": .33}
+                background_color: 0,0,0,0
+                canvas.before:
+                    Color:
+                        rgb: 0, 0, 0, 1
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        radius: [10]
+
+            Image:
+                source: "Images/SLTC_Logo.png"
+                size_hint: 0.6, 0.6
+                pos_hint: {'center_x': 0.5, 'center_y': 0.100}

@@ -1,10 +1,15 @@
 from kivy.clock import Clock
 from kivy.core.window import Window
 from kivy.lang import Builder
-from kivy.uix.screenmanager import ScreenManager
+from kivy.uix.screenmanager import ScreenManager, Screen
 from kivymd.app import MDApp
+from kivymd.uix.textfield import MDTextField
 
 Window.size = (310, 580)
+
+
+class LoginScreen(Screen):
+    pass
 
 
 class SplashScreen(MDApp):
@@ -16,7 +21,7 @@ class SplashScreen(MDApp):
         return sm
 
     def on_start(self):
-        Clock.schedule_once(self.login, 20)
+        Clock.schedule_once(self.login, 5)
 
     def login(*args):
         sm.current = "login"
