@@ -1,0 +1,68 @@
+MDScreen:
+    md_bg_color:0,0,0,0
+    MDBoxLayout:
+        orientation:'vertical'
+        MDBoxLayout:
+            size_hint_y:.13
+            padding:dp(35)
+            MDBoxLayout:
+                orientation:"vertical"
+                MDBoxLayout:
+                    adaptive_size:True
+                    spacing:dp(22)
+                    MDIcon:
+                        icon:'home'
+                    MDLabel:
+                        text:"Home"
+                        text_size:None,None
+                        adaptive_width:True
+
+        MDGridLayout:
+            size_hint_y:.75
+            cols:2
+            padding:[dp(15),dp(15),dp(15),dp(25)]
+            spacing:dp(15)
+            ElementCard:
+                image:"Images/Home1.png"
+                text:"Location"
+
+            ElementCard:
+                image:"Images/Home2.png"
+                text:"Attendance"
+
+            ElementCard:
+                image:"Images/Home3.png"
+                text:"Profile"
+
+            ElementCard:
+                image:"Images/Home4.png"
+                text:"Payment"
+
+            ElementCard:
+                image:"Images/Home5.png"
+                text:"Emergency"
+
+            ElementCard:
+                image:"Images/Home6.png"
+                text:"Settings"
+
+
+<ElementCard@MDCard>:
+
+    md_bg_color: 200/255,200/255,200/255,0
+    padding:dp(15)
+    spacing:dp(15)
+    radius:dp(25)
+    ripple_behavior: True
+    image:''
+    text:""
+
+    orientation:'vertical'
+    Image:
+        source:root.image
+    MDBoxLayout:
+        orientation:'vertical'
+        MDLabel:
+            halign:"center"
+            text:root.text
+            font_size:"16dp"
